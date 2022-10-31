@@ -10,6 +10,7 @@ export default function Weather() {
   function showWeather(response) {
     setLoaded(true);
     setWeather({
+      cityname: response.data.name,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
@@ -29,15 +30,16 @@ export default function Weather() {
   }
 
   let searchForm = (
-    <div className="Weather">
+    <div>
       <form onSubmit={handleSubmit}>
         <input
           type="search"
           placeholder="Enter a city…"
           autoFocus={true}
           onChange={updateCity}
+          className="Enter-City"
         />
-        <input type="submit" value="Search" />
+        <input type="submit" value="Search" className="Weather-Search" />
       </form>
     </div>
   );
@@ -46,6 +48,7 @@ export default function Weather() {
     return (
       <div className="Weather">
         {searchForm}
+        <h2>{weather.cityname} </h2>
         <ul>
           <li>temperature: {Math.round(weather.temperature)} °C</li>
           <li>description: {weather.description}</li>
