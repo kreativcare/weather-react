@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./Weather.css";
 
 export default function Weather() {
   let [weather, setWeather] = useState({});
@@ -52,7 +53,7 @@ export default function Weather() {
           <li>wind: {Math.round(weather.wind)} m/s</li>
           <li>
             {" "}
-            <img src={weather.icon} />
+            <img src={weather.icon} alt={weather.description} />
           </li>
         </ul>
       </div>
