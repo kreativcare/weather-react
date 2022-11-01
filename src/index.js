@@ -9,7 +9,10 @@ root.render(
   <React.StrictMode>
     <App />
     <div className="footer">
-      <a href="https://github.com/kreativcare/weather-react">
+      <a
+        href="https://github.com/kreativcare/weather-react"
+        target="rel-noopener"
+      >
         Open-source code
       </a>{" "}
       by Stefanie Jahn
