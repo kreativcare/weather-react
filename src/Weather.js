@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import axios from "axios";
 import "./Weather.css";
 
@@ -59,6 +60,11 @@ export default function Weather() {
             <img src={weather.icon} alt={weather.description} />
           </li>
         </ul>
+
+        <div className="row">
+          <div className="col-sm-2">Forecast </div>
+          <div className="col-sm-2">Forecast </div>
+        </div>
       </div>
     );
   } else {
