@@ -3,6 +3,7 @@ import FormattedDate from "./FormattedDate.js";
 import axios from "axios";
 import "./Weather.css";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function Weather() {
   let [weather, setWeather] = useState({});
@@ -63,9 +64,8 @@ export default function Weather() {
               <WeatherIcon code={weather.icon} />
             </span>
             <span className="Temperature">
-              {Math.round(weather.temperature)}
+              <WeatherTemperature celsius={weather.temperature} />
             </span>
-            <span className="Unit">°C</span>
           </div>
 
           <div className="col-6">

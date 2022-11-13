@@ -42,8 +42,14 @@
 .Temperature {
   font-size: 52px;
   font-weight: 600;
-  margin-left: 20px;
   margin-top: 16px;
+}
+
+.Unit {
+  font-size: 16px;
+  position: relative;
+  top: -24px;
+  margin-left: -10px;
 }
 
 .Icon canvas {
@@ -51,7 +57,6 @@
   top: 10px;
 }
 
-.Unit {
-  position: relative;
-  top: -24px;
+a {
+  text-decoration: none;
 }
