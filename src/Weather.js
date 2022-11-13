@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate.js";
 import axios from "axios";
 import "./Weather.css";
 
@@ -11,6 +12,7 @@ export default function Weather() {
     setLoaded(true);
     setWeather({
       cityname: response.data.name,
+      date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
@@ -52,7 +54,10 @@ export default function Weather() {
         <div className="row">
           <div className="col-6">
             <h2>{weather.cityname} </h2>
-            <div className="Date"> Date</div>
+            <div className="Date">
+              {" "}
+              <FormattedDate date={weather.date} />
+            </div>
             <img
               src={weather.icon}
               alt={weather.description}
@@ -75,6 +80,9 @@ export default function Weather() {
       </div>
     );
   } else {
-    return searchForm;
+    let defaultCity = "Bremen";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${defaultCity}&appid=1a15e23b46fc8dbb324b4a9be06ed972&units=metric`;
+    axios.get(apiUrl).then(showWeather);
+    return "Loading…";
   }
 }
