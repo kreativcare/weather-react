@@ -1,23 +1,25 @@
 .Weather {
   display: block;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Trebuchet MS", sans-serif;
   text-align: left;
 }
 .Weather h2 {
-  margin-left: 16px;
+  font-size: 48px;
+  font-weight: bold;
+  margin-left: 8px;
   margin-top: 50px;
 }
 
 .Weather ul {
   list-style: none;
   margin-left: -20px;
-  margin-top: 20px;
+  margin-top: 180px;
 }
 
 .Weather-Search {
   background-color: blueviolet;
   color: white;
-  padding: 10px 8px 10px 8px;
+  padding: 10px 12px 10px 12px;
   border-radius: 4px;
   border-color: blueviolet;
   cursor: pointer;
@@ -29,4 +31,26 @@
   padding: 10px 8px 10px 8px;
   border-radius: 4px;
   border-color: blueviolet;
+}
+
+.Date {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+
+.Temperature {
+  font-size: 52px;
+  font-weight: 600;
+  margin-left: 20px;
+  margin-top: 16px;
+}
+
+.WeatherIcon {
+  padding-bottom: 16px;
+}
+
+.Unit {
+  position: relative;
+  top: -24px;
 }
