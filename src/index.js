@@ -17,7 +17,13 @@ root.render(
         >
           Open-source code
         </a>{" "}
-        by Stefanie Jahn
+        on Github by Stefanie Jahn and hosted on{" "}
+        <a
+          href="https://fabulous-dodol-2de501.netlify.app/"
+          target="rel-noopener"
+        >
+          Netlify
+        </a>
       </div>
     </div>
   </React.StrictMode>

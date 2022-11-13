@@ -46,8 +46,9 @@
   margin-top: 16px;
 }
 
-.WeatherIcon {
-  padding-bottom: 16px;
+.Icon canvas {
+  position: relative;
+  top: 10px;
 }
 
 .Unit {
