@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import FormattedDate from "./FormattedDate.js";
+import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
-import WeatherIcon from "./WeatherIcon";
-import WeatherTemperature from "./WeatherTemperature";
 
 export default function Weather() {
   let [weather, setWeather] = useState({});
@@ -52,33 +51,8 @@ export default function Weather() {
     return (
       <div className="Weather">
         {searchForm}
-
-        <div className="row">
-          <div className="col">
-            <h2>{weather.cityname} </h2>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-6">
-            <div className="Date">
-              {" "}
-              <FormattedDate date={weather.date} />
-            </div>
-            <span className="Icon">
-              <WeatherIcon code={weather.icon} />
-            </span>
-            <span className="Temperature">
-              <WeatherTemperature celsius={weather.temperature} />
-            </span>
-          </div>
-          <div className="col-6">
-            <ul>
-              <li>{weather.description}</li>
-              <li>humidity: {weather.humidity} %</li>
-              <li>wind: {Math.round(weather.wind)} m/s</li>
-            </ul>
-          </div>
-        </div>
+        <WeatherInfo weather={weather} />
+        <WeatherForecast />
       </div>
     );
   } else {
