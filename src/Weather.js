@@ -54,8 +54,12 @@ export default function Weather() {
         {searchForm}
 
         <div className="row">
-          <div className="col-6">
+          <div className="col">
             <h2>{weather.cityname} </h2>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-6">
             <div className="Date">
               {" "}
               <FormattedDate date={weather.date} />
@@ -67,7 +71,6 @@ export default function Weather() {
               <WeatherTemperature celsius={weather.temperature} />
             </span>
           </div>
-
           <div className="col-6">
             <ul>
               <li>{weather.description}</li>
