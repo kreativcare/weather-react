@@ -13,14 +13,14 @@ root.render(
       <div className="footer">
         <a
           href="https://github.com/kreativcare/weather-react"
-          target="rel-noopener"
+          target="noopener noreferrer"
         >
           Open-source code
         </a>{" "}
         on Github by Stefanie Jahn and hosted on{" "}
         <a
           href="https://fabulous-dodol-2de501.netlify.app/"
-          target="rel-noopener"
+          target="noopener noreferrer"
         >
           Netlify
         </a>
