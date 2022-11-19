@@ -53,7 +53,7 @@ export default function Weather() {
       <div className="Weather">
         {searchForm}
         <WeatherInfo weather={weather} />
-        <WeatherForecast coordinates={weather} />
+        <WeatherForecast coordinates={weather.coordinates} />
       </div>
     );
   } else {
