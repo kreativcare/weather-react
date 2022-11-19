@@ -13,6 +13,7 @@ export default function Weather() {
     setLoaded(true);
     setWeather({
       cityname: response.data.name,
+      coordinates: response.data.coord,
       date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
@@ -52,7 +53,7 @@ export default function Weather() {
       <div className="Weather">
         {searchForm}
         <WeatherInfo weather={weather} />
-        <WeatherForecast />
+        <WeatherForecast coordinates={weather} />
       </div>
     );
   } else {

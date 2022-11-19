@@ -19,7 +19,7 @@ export default function WeatherInfo(props) {
             <FormattedDate date={props.weather.date} />
           </div>
           <span className="Icon">
-            <WeatherIcon code={props.weather.icon} size={64} />
+            <WeatherIcon code={props.weather.icon} size={80} />
           </span>
           <span className="Temperature">
             <WeatherTemperature celsius={props.weather.temperature} />
